@@ -13,10 +13,17 @@
 - `pip install selenium`
 - `pip install bs4`
 - `pip install itertools`
-- `pip install pandas
+- `pip install pandas`
 
 ✔ ***You need to download [CromeDriver](https://chromedriver.chromium.org/downloads) here.***
 *To give the path in webdriver*
+
+## How to Run 🏃‍♂️ 
+1. Open terminal and type `git clone` and give path of [repo](https://github.com/heykush/Grocery-VS-Grocery.git)
+2. After cloning of repo on local.
+3. Run main.py
+4. Done
+
 
 Contributing 🤝
 ==========
