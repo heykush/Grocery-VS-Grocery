@@ -53,7 +53,6 @@ def all_pro():
     )
 
     for u in productgroup:
-        # for links in p:
         linaa = u.find_elements_by_tag_name("a")
         for oaa in linaa:
             plink = oaa.get_attribute("href")
@@ -96,21 +95,17 @@ def all_pro():
                 prices = ll.text
                 zz.append(prices)
             final = chain(namee, pp, price, club)
-
-            # lll = "https://grofers.com" + links["href"]
-            # alllink.append(lll)
+            
         for uu in final:
             print(uu.text, end="\n")
         df = pd.DataFrame()
-        # df["Main-Categorie"] = pd.Series(maincat)
-        # df["Sub-Categorie"] = pd.Series(subcat)
         df["Product-Name"] = pd.Series(aa)
         df["Quantity"] = pd.Series(xx)
         df["Price"] = pd.Series(zz)
         df["Club-Price"] = pd.Series(bb)
         df["links"] = pd.Series(pplink)
         print(df)
-        # df.to_csv("grocery.csv", index=False)
+        df.to_csv(f"grocery.csv", index=False)
 
 
 for link in categories.find_all("a", href=True)[1:20]:
@@ -135,11 +130,11 @@ for j in mainlinks:
             for o in lin:
                 href = o.get_attribute("href")
                 hrefs.append(href)
-        print(hrefs)
+        # print(hrefs)
 
         for z in hrefs[1:]:
             driver.get(z)
-            print(z)
+            # print(z)
             sleep(3)
 
             subitemlist = driver.find_elements_by_xpath(
